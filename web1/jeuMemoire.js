@@ -200,13 +200,7 @@ function drawMessageBox(title,text){
 //texte
 	context.fillStyle="#000000";
 	context.font = fontSizeInfo + "px sans-serif";
-	context.fillText(text, canvasWidth / 2 - 0.20 * width  , canvasHeight / 2 - 0.10 * height);
-}
-function gagner(player){
-	drawMessageBox("felecitation",player.nom + " a gagne");
-}
-function perdre(player){
-	drawMessageBox("desole",player.nom + " a perdu");
+	context.fillText(text, canvasWidth / 2 - 0.40 * width  , canvasHeight / 2 - 0.10 * height);
 }
 //refresh a 30 fps
 

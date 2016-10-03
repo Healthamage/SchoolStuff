@@ -58,9 +58,11 @@ class Player {
 
 		//les box si il est gagnant ou perdant
 		if(this.state == PlayerState.WINNER)
-			drawMessageBox("MATCH TERMINÉ","félicitation vous avez gagné",context);
+			drawMessageBox("MATCH TERMINe","felicitation vous avez gagne",context);
 		else if(this.state == PlayerState.LOSER)
-			drawMessageBox("MATCH TERMINÉ","Désolé vous avez perdu",context);
+			drawMessageBox("MATCH TERMINe","Desole vous avez perdu",context);
+		else if(this.state == PlayerState.WAITING)
+			drawMessageBox("EN ATTENTE","en attente de votre adversaire",context);
   	}
   	drawMessageBox(title,text,context){
 		var width = context.canvas.width * 0.33;
