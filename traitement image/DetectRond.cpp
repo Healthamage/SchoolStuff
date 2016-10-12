@@ -27,7 +27,7 @@ Mat detectRond(Mat src) {
 	Point center;
 	//algorithme pour trouver le radius et le centre
 	bool circleFound = false;
-	
+
 	Point topCircle;
 	Point leftCircle;
 	topCircle.x = 0;
@@ -96,7 +96,7 @@ void detectRondOnImg(String path) {
 	}
 	else {
 		detectRond(src);
-		
+
 		while (waitKey(1) != 27) {};
 	}
 }
@@ -105,7 +105,7 @@ void detectRondOnImg(String path) {
 void detectRondOnVideo(String path) {
 
 	VideoCapture cap(path);
-	
+
 	if (!cap.isOpened()) {
 		cout << "impossible d'ouvrir le video" << endl;
 	}
@@ -120,7 +120,7 @@ void detectRondOnVideo(String path) {
 				cout << "Repeating!\r\n";
 				cap.set(CAP_PROP_POS_AVI_RATIO, 0);
 			}
-			if (src.data);
+			if (src.data)
 				detectRond(src);
 			time(&endTime);
 		} while (waitKey(boucleDelais - (endTime - startTime)) != 27);
@@ -140,7 +140,7 @@ void detectRondOnCamera(String numeroCamera) {
 				detectRond(src);
 			}
 		}
-	}		
+	}
 }
 
 
