@@ -29,7 +29,7 @@ class TelephonesController < ApplicationController
 
     respond_to do |format|
       if @telephone.save
-        format.html { redirect_to @telephone, notice: 'Telephone was successfully created.' }
+        format.html { redirect_to @telephone.contact, notice: 'Telephone was successfully created.' }
         format.json { render :show, status: :created, location: @telephone }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class TelephonesController < ApplicationController
   def update
     respond_to do |format|
       if @telephone.update(telephone_params)
-        format.html { redirect_to @telephone, notice: 'Telephone was successfully updated.' }
+        format.html { redirect_to @telephone.contact, notice: 'Telephone was successfully updated.' }
         format.json { render :show, status: :ok, location: @telephone }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class TelephonesController < ApplicationController
   def destroy
     @telephone.destroy
     respond_to do |format|
-      format.html { redirect_to telephones_url, notice: 'Telephone was successfully destroyed.' }
+      format.html { redirect_to @telephone.contact, notice: 'Telephone was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

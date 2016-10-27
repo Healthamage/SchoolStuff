@@ -2,4 +2,4 @@
 
 <%= render 'form', telephone: @telephone %>
 
-<%= link_to 'Back', telephones_path %>
+<%= link_to 'Back', contact_path(@telephone.contact) %>

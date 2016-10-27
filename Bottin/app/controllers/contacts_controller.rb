@@ -15,7 +15,9 @@ class ContactsController < ApplicationController
   def show
 
   end
-
+  def newWork
+    @works = Work.all
+  end
   # GET /contacts/new
   def new
     @contact = Contact.new
@@ -58,7 +60,9 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
+
     @contact.destroy
+
     respond_to do |format|
       format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
       format.json { head :no_content }

@@ -1,8 +1,8 @@
 <h1><%= telephone.contact.fullname %></h1>
 
-<%= form_for(telephone) do |f| %>
+<%= form_for(telephone,{:url => [telephone.contact,telephone]}) do |f| %>
   <%= f.hidden_field :contact_id %>
-  
+
   <% if telephone.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(telephone.errors.count, "error") %> prohibited this telephone from being saved:</h2>
